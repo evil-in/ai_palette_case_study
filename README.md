@@ -1,5 +1,5 @@
 # Case Study Assignment:
-## Data Collection Engineer for AI Palette
+## Data Collection Engineer (AI Palette)
 
 ### Problem Statement: 
 To gather data from the fork.com 
@@ -9,6 +9,5 @@ To gather data from the fork.com
 * **Framework** : Selenium, BeautifulSoup
 
 ## Problem Solving Approach:
-
 
 <img src="https://github.com/evil-in/ai_palette_case_study/blob/main/problem_solving_approach.PNG" height="350" width="750" alt = "Problem Solving Approach">
