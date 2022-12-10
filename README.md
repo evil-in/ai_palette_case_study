@@ -11,4 +11,4 @@ To gather data from the fork.com
 ## Problem Solving Approach:
 
 
-<img src="https://github.com/evil-in/ai_palette_case_study/blob/main/problem_solving_approach.PNG" height="300" width="600" alt = "Problem Solving Approach">
+<img src="https://github.com/evil-in/ai_palette_case_study/blob/main/problem_solving_approach.PNG" height="350" width="750" alt = "Problem Solving Approach">
