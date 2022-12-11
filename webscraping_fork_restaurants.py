@@ -87,7 +87,7 @@ def review_details(soup):
     reviews_list = []
     rating = soup.find('div', attrs = {'class': 'css-1qlf8lu elkhwc30'})
     
-    for i in soup.find_all('li', attrs = {'data-test': 'restaurant-page-review-item'}): #'class': 'css-jt9u3f elkhwc30'
+    for i in soup.find_all('li', attrs = {'data-test': 'restaurant-page-review-item'}):
         review_text = i.find('div', attrs = {'class': 'css-1q7ojw1 er1i9v62'})
         review_rating = i.find('div', attrs = {'class': 'css-1niwa0b elkhwc30'})
     
