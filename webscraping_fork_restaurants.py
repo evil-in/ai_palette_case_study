@@ -18,7 +18,7 @@ def request_parser(url):
     """ Function to make a request using selenium and then grab the html and convert it into a soup object BeautifulSoup's lxml parser. """
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get(url)
-    time.sleep(20)
+    time.sleep(30)
     html_text = driver.page_source
     soup = BeautifulSoup(html_text,'lxml')
     driver.close()
@@ -129,9 +129,18 @@ def main():
         menu = menu_details(s)
         
         # Fetching reviews
-        url = link + '/reviews'
-        s = request_parser(url)
-        reviews, avg_rating = review_details(s)
+        try:
+                
+            url = link + '/reviews'
+            s = request_parser(url)
+            reviews, avg_rating = review_details(s)
+        except UnboundLocalError: # Error when there are no reviews available for the restaurant
+            url = link
+            s = request_parser(url)
+            rating_final = s.find('div', attrs = {'class': 'css-1qlf8lu elkhwc30'})
+            avg_rating = rating_final.get_text().replace('/10', '')
+            reviews = '' # No reviews available
+            
         
         restaurant_dict = {'restaurant_name':name,
                            'menu_items': menu,
